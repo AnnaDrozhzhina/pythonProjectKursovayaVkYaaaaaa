@@ -3,15 +3,16 @@ import requests
 
 class vk:
 
-   def __init__(self, access_token, user_id, version='5.131'):
+   def __init__(self, access_token, owner_id, version='5.131'):
        self.token = access_token
-       self.id = user_id
+       self.id = owner_id
        self.version = version
        self.params = {'access_token': self.token, 'v': self.version}
 
    def get_photos_info(self):
        url = 'https://api.vk.com/method/photos.get'
-       params = {'album_id': 'wall',
+       params = {'owner_id': self.id,
+                 'album_id': 'wall',
                  'rev': 1,
                  'extended': 1,
                  'photo_sizes': 1}

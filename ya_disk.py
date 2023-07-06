@@ -11,7 +11,7 @@ class ya_disk:
                 'Content-Type': 'application/json',
                 'Authorization': f'OAuth {self.token}'
             }
-        self.ya_folder = "folder VK VK YA ya photos!"
+        self.ya_folder = "VK YA photos new folder!!!"
 
     def _create_folder(self):
         url = 'https://cloud-api.yandex.net/v1/disk/resources'
